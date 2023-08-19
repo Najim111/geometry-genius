@@ -48,7 +48,10 @@ function calculateParallelogramleArea(){
   const parallelogramBaseField = getInputValue('parallelogramBase-field');
  
   const  parallelogramHeightField = getInputValue('parallelogramHeight-field');
-  
+  if(isNaN(parallelogramBaseField)|| isNaN(parallelogramHeightField)){
+    alert('please give me number')
+    return;
+  }
   const area = parallelogramBaseField*parallelogramHeightField
   setElementInnerText('parallelogramSpan-area', area);
 
